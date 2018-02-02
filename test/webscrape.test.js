@@ -1,7 +1,8 @@
 //https://segment.com/blog/ui-testing-with-nightmare/
-const jquery = require('jquery')
+
 const Nightmare = require('nightmare');
 const expect = require('chai').expect; // jshint ignore:line
+const quotes = require('../index');
 
 describe('Load a Page', function() {
   // Recommended: 5s locally, 10s to remote server, 30s from airplane ¯\_(ツ)_/¯
@@ -78,8 +79,5 @@ describe('Load a Page', function() {
     })
 
   })
-
-
-
 
 })

@@ -35,7 +35,7 @@ module.exports = async function(author,pages) {
     const finalArray = await processArray(array, author)
     const formatAuthor = author.replace(" ","-")
     fs.writeFileSync(`${formatAuthor}.json`, JSON.stringify(finalArray));
-
+    console.log(`${author} is complete!`);
   }
 
   catch(err){
