@@ -1,10 +1,14 @@
 const Nightmare = require('nightmare');
 const fs = require('fs');
 
-module.exports = async function(author,pages) {
+module.exports = async function(author,pages,status) {
 
   try{
-    const nightmare = Nightmare({show:true}),
+
+    if(!status)
+      status = false;
+
+    const nightmare = Nightmare({show:status}),
         MAX_PAGE = pages || 100;
     let currentPage = 1,
         nextExists = true,
