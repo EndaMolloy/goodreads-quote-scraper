@@ -1,9 +1,10 @@
 # goodreads-quote-scraper
+
 A nightmarejs based webscraper for collecting quotes of a given author from [goodreads.com](https://www.goodreads.com/quotes/search?utf8=%E2%9C%93&q=george+bernard+shaw&commit=Search). The quotes are then saved as a prettified json file in your root directory.
 
 The quotes are ordered as on goodreads i.e. most liked first. Only quotes attributed to the author are written to the final file.
 
-[![NPM](https://nodei.co/npm/goodreads-quote-scraper.png)](https://nodei.co/npm/goodreads-quote-scraper/)
+
 
 
 # Installation
@@ -12,6 +13,7 @@ npm install --save goodreads-quote-scraper
 ```
 Note: electron can take some time to download.
 
+[![NPM](https://nodei.co/npm/goodreads-quote-scraper.png)](https://nodei.co/npm/goodreads-quote-scraper/)
 
 # Usage
 The API takes three arguments, the third being optional.
@@ -33,7 +35,7 @@ getQuotes();
 
 async function getQuotes(){
   try{
-    await goodreads('micheal lewis', 2);
+    await goodreads('ralph waldo emerson', 2);
     await goodreads('mark twain', 5);
     await goodreads('harper lee', 1);
   }
